@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  </head>
+  <body>
+    <form id="test" onsubmit="return false">
+    <input type="checkbox" id="airConTue" name="weekday[]" value='tuesday'>Tuesday
+    <input type="checkbox" id="airConWed" name="weekday[]" value='wednesday'>Wednesday
+    <input type="checkbox" id="airConThur" name="weekday[]" value='thursday'>Thursday
+    <input type="submit">
+  </form>
+  </body>
+  <script src="src/jquery-3.5.1.min.js"></script>
+  <script src="src/jquery.validate.min.js"></script>
+  <script>
+    window.validator = $("#test").validate({
+      rules: {
+        "weekday[]": {required: !0}
+      }
+    });
+  </script>
+</html>
